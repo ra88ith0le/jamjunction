@@ -2,7 +2,7 @@
 
 /* Style for the input fields */
 .sound-input {
-    width: 20%;
+    width: 100%; /* Full width on small screens */
     padding: 10px;
     margin: 0px 0px 8px 0px;
     border: 1px solid #ccc;
@@ -11,28 +11,19 @@
 }
 
 /* Style for the number field */
-#bpmInput {
-    width: 40%;
-    padding: 10px;
-    margin: 0px 0px 8px 0px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-/* Style for the repetitions field */
+#bpmInput,
 #repetitions {
-    width: 40%;
+    width: 100%; /* Full width on small screens */
     padding: 10px;
     margin: 0px 0px 8px 0px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
 }
-
 
 /* Style for the play button */
 #playButton {
-    display: inline-block;
+    width: 100%; /* Full width on small screens */
     padding: 10px 20px;
     margin: 10px 0;
     background-color: #FF5A5F;
