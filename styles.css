@@ -3,7 +3,7 @@
 /* Style for the dropdown fields */
 .sound-input {
     width: 24%; /* Full width on small screens */
-    padding: 10px;
+    padding: 0px 12px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
@@ -16,14 +16,15 @@
 /* Style for the number fields */
 #bpmInput,
 #repetitions {
-    padding: 14px;
+    width:82%; /* Full width on small screens */
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    min-height: 48px; 
 }
 .input-container {
     display: flex;
-    justify-content: space-between; /* Adjust this as needed to control the spacing between the inputs */
+    justify-content: space-around; /* Adjust this as needed to control the spacing between the inputs */
     align-items: center; /* To vertically align the inputs */
 }
 
@@ -31,7 +32,7 @@
     flex: 1; /* Makes the input groups take up equal width and fill the available space */
     display: flex;
     flex-direction: column;
-    margin: 10px 4px; /* Adjust margin as needed to control the vertical and horizontal spacing between the input groups */
+    margin: 10px 0px 0px 0px; /* Adjust margin as needed to control the vertical and horizontal spacing between the input groups */
 }
 
 .input-group label {
@@ -43,7 +44,7 @@
 }
 
 .input-group input {
-    padding: 10px; /* Adjust padding as needed */
+    padding: 0px 12px; /* Adjust padding as needed */
 }
 
 
