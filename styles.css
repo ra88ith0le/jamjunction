@@ -1,44 +1,43 @@
 /* CSS for Airbnb-like input fields */
 
-/* Style for the dropdown field */
-#bpmInput,
-#repetitions {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
+/* Style for the dropdown fields */
 .sound-input {
-    width: 20%; /* Full width on small screens */
+    width: 24%; /* Full width on small screens */
     padding: 10px;
-    margin: 0px 0px 8px 0px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
     min-height: 48px; 
     max-width: 150px;
+    margin-bottom: 10px; /* Add spacing below the input field group */
+
 }
 
 /* Style for the number fields */
 #bpmInput,
 #repetitions {
+    padding: 14px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
 }
 .input-container {
     display: flex;
-    justify-content: flex-start; /* Adjust this as needed to control the spacing between the inputs */
+    justify-content: space-between; /* Adjust this as needed to control the spacing between the inputs */
     align-items: center; /* To vertically align the inputs */
 }
 
 .input-group {
     display: flex;
     flex-direction: column;
-    padding: 0px 10px 0px 0px; /* Adjust margin as needed to control the spacing around the inputs */
+    margin-bottom: 5px; /* Add spacing below the input field group */
 }
 
 .input-group label {
-    font-weight: bold; /* Style the label text */
+    font-family: Ubuntu, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
     margin-bottom: 5px; /* Add spacing between the label and input field */
 }
 
@@ -92,7 +91,7 @@ h3 {
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 16px; /* 114.286% */
+    margin-bottom: 5px; /* Add spacing between the label and input field */
 }
 
 .container {
@@ -101,3 +100,5 @@ h3 {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
+

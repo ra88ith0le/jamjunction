@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
@@ -8,7 +9,7 @@
 
     <div class="input-container">
       <div class="input-group">
-        <label for="bpmInput">Enter tempo (bpm)</label>
+        <label for="bpmInput">Enter tempo (Bpm)</label>
         <input type="number" id="bpmInput" min="40" max="208" step="2" placeholder="(40 - 208)">
       </div>
       <div class="input-group">
@@ -21,7 +22,6 @@
     
 
     <h3>Add chord progression</h3>
-    
     <select class="sound-input" id="input1">
       <option value="C">C</option>
       <option value="C#">C#</option>
@@ -98,11 +98,10 @@
       <option value="Bb">Bb</option>
       <option value="B">B</option>
     </select>
-  </br>
 
 
         <button id="playButton">Play</button>
-      </br>
+
 
     <div id="imageContainer">
         <img id="soundImage" src="placeholder-image.jpg" alt="Sound Image" width="500" height="500">
