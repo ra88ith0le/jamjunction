@@ -28,9 +28,10 @@
 }
 
 .input-group {
+    flex: 1; /* Makes the input groups take up equal width and fill the available space */
     display: flex;
     flex-direction: column;
-    margin-bottom: 5px; /* Add spacing below the input field group */
+    margin: 10px 4px; /* Adjust margin as needed to control the vertical and horizontal spacing between the input groups */
 }
 
 .input-group label {
@@ -42,7 +43,6 @@
 }
 
 .input-group input {
-    flex: 1; /* Makes the inputs take up equal width and fill the available space */
     padding: 10px; /* Adjust padding as needed */
 }
 
@@ -80,6 +80,7 @@
 /* Additional styling for better visual presentation */
 body {
     font-family: Ubuntu, sans-serif;
+    color: #020627;
     background-color: #fff;
     padding: 20px;
     max-width: 450px;
