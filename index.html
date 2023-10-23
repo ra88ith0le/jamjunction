@@ -5,11 +5,23 @@
 </head>
 <body>
     <h1>Welcome to Jam Junction!</h1>
-    <h3>Enter tempo (40 - 208 Bpm)</h3>
-    <input type="number" id="bpmInput" min="40" max="208" step="2" placeholder="Bpm 40-208">
-<br />
 
-    <h3>Select "C" or "F" in each field</h3>
+    <div class="input-container">
+      <div class="input-group">
+        <label for="bpmInput">Enter tempo (bpm)</label>
+        <input type="number" id="bpmInput" min="40" max="208" step="2" placeholder="(40 - 208)">
+      </div>
+      <div class="input-group">
+        <label for="repetitions">Set repetitions</label>
+        <input type="number" id="repetitions" placeholder="Eg. 1">
+      </div>
+    </div>
+  
+
+    
+
+    <h3>Add chord progression</h3>
+    
     <select class="sound-input" id="input1">
       <option value="C">C</option>
       <option value="C#">C#</option>
@@ -88,9 +100,6 @@
     </select>
   </br>
 
-    <h3>Set repetitions</h3>
-      <input type="number" id="repetitions" placeholder="Repetitions">
-    </br>
 
         <button id="playButton">Play</button>
       </br>

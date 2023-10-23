@@ -1,25 +1,52 @@
 /* CSS for Airbnb-like input fields */
 
-/* Style for the input fields */
-.sound-input {
-    width: 100%; /* Full width on small screens */
-    padding: 10px;
-    margin: 0px 0px 8px 0px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-/* Style for the number field */
+/* Style for the dropdown field */
 #bpmInput,
 #repetitions {
-    width: 100%; /* Full width on small screens */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.sound-input {
+    width: 20%; /* Full width on small screens */
     padding: 10px;
     margin: 0px 0px 8px 0px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px;
+    min-height: 48px; 
+    max-width: 150px;
 }
+
+/* Style for the number fields */
+#bpmInput,
+#repetitions {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.input-container {
+    display: flex;
+    justify-content: flex-start; /* Adjust this as needed to control the spacing between the inputs */
+    align-items: center; /* To vertically align the inputs */
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px 0px 0px; /* Adjust margin as needed to control the spacing around the inputs */
+}
+
+.input-group label {
+    font-weight: bold; /* Style the label text */
+    margin-bottom: 5px; /* Add spacing between the label and input field */
+}
+
+.input-group input {
+    flex: 1; /* Makes the inputs take up equal width and fill the available space */
+    padding: 10px; /* Adjust padding as needed */
+}
+
 
 /* Style for the play button */
 #playButton {
@@ -56,7 +83,10 @@ body {
     font-family: Ubuntu, sans-serif;
     background-color: #fff;
     padding: 20px;
+    max-width: 450px;
+    margin: 0 auto; /* Center the content horizontally within the 500px width */
 }
+
 h3 {
     font-family: Ubuntu, sans-serif;
     font-size: 16px;
