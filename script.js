@@ -9,6 +9,28 @@ document.addEventListener("DOMContentLoaded", function () {
     var soundImage = document.getElementById("soundImage");
     var bpmInput = document.getElementById("bpmInput");
 
+    // Define an array of image and sound file URLs to preload
+    var preloadImages = ["images/image-C-maj-7.png", "images/image-C#-maj-7.png", "images/image-D-maj-7.png", "images/image-D#-maj-7.png", "images/image-Db-maj-7.png", "images/image-E-maj-7.png", "images/image-Eb-maj-7.png", "images/image-F-maj-7.png", "images/image-F#-maj-7.png", "images/image-G-maj-7.png", "images/image-G#-maj-7.png", "images/image-Gb-maj-7.png", "images/image-A-maj-7.png", "images/image-A#-maj-7.png", "images/image-Ab-maj-7.png", "images/image-B-maj-7.png", "images/image-Bb-maj-7.png" /* Add more image URLs */];
+    var preloadSounds = ["sounds/sound-file-C-maj-7.mp3", "sounds/sound-file-C#-maj-7.mp3","sounds/sound-file-D-maj-7.mp3", "sounds/sound-file-D#-maj-7.mp3", "sounds/sound-file-Db-maj-7.mp3", "sounds/sound-file-E-maj-7.mp3", "sounds/sound-file-Eb-maj-7.mp3", "sounds/sound-file-F-maj-7.mp3", "sounds/sound-file-F#-maj-7.mp3", "sounds/sound-file-G-maj-7.mp3", "sounds/sound-file-G#-maj-7.mp3", "sounds/sound-file-Gb-maj-7.mp3", "sounds/sound-file-A-maj-7.mp3", "sounds/sound-file-Ab-maj-7.mp3", "sounds/sound-file-B-maj-7.mp3", "sounds/sound-file-Bb-maj-7.mp3",/* Add more sound file URLs */];
+
+    // Function to preload resources
+    function preloadResources(resourceArray) {
+        resourceArray.forEach(function (resourceUrl) {
+            var preloadElement;
+            if (resourceUrl.endsWith(".mp3")) {
+                preloadElement = new Audio();
+            } else {
+                preloadElement = new Image();
+            }
+            preloadElement.src = resourceUrl;
+        });
+    }
+
+    // Preload images and sounds
+    preloadResources(preloadImages);
+    preloadResources(preloadSounds);
+
+
     playButton.addEventListener("click", function () {
         soundFiles = [];
         inputs.forEach(function (select) {
@@ -41,22 +63,22 @@ document.addEventListener("DOMContentLoaded", function () {
     function getFileNameForNote(note) {
         // Mapping of notes to sound file names
         var noteToFileName = {
-            "C": "sound-file-C.mp3",
-            "C#": "sound-file-C#.mp3",
-            "Db": "sound-file-Db.mp3",
-            "D": "sound-file-D.mp3",
-            "D#": "sound-file-D#.mp3",
-            "E": "sound-file-E.mp3",
-            "F": "sound-file-F.mp3",
-            "F#": "sound-file-F#.mp3",
-            "Gb": "sound-file-Gb.mp3",
-            "G": "sound-file-G.mp3",
-            "G#": "sound-file-G#.mp3",
-            "Ab": "sound-file-Ab.mp3",
-            "A": "sound-file-A.mp3",
-            "A#": "sound-file-A#.mp3",
-            "Bb": "sound-file-Bb.mp3",
-            "B": "sound-file-B.mp3",
+            "C": "sound-file-C-maj-7.mp3",
+            "C#": "sound-file-C#-maj-7.mp3",
+            "Db": "sound-file-Db-maj-7.mp3",
+            "D": "sound-file-D-maj-7.mp3",
+            "D#": "sound-file-D#-maj-7.mp3",
+            "E": "sound-file-E-maj-7.mp3",
+            "F": "sound-file-F-maj-7.mp3",
+            "F#": "sound-file-F#-maj-7.mp3",
+            "Gb": "sound-file-Gb-maj-7.mp3",
+            "G": "sound-file-G-maj-7.mp3",
+            "G#": "sound-file-G#-maj-7.mp3",
+            "Ab": "sound-file-Ab-maj-7.mp3",
+            "A": "sound-file-A-maj-7.mp3",
+            "A#": "sound-file-A#-maj-7.mp3",
+            "Bb": "sound-file-Bb-maj-7.mp3",
+            "B": "sound-file-B-maj-7.mp3",
         };
         return noteToFileName[note];
     }
@@ -94,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function updateSoundImage(soundFileName) {
-        var imageName = soundFileName.replace("sounds/", "images/").replace("sound-file-", "image-").replace(".mp3", ".jpg"); // Updated image file path
+        var imageName = soundFileName.replace("sounds/", "images/").replace("sound-file-", "image-").replace(".mp3", ".png"); // Updated image file path
         soundImage.src = imageName;
     }
 });
