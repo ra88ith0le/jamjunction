@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var bpmInput = document.getElementById("bpmInput");
 
     // Define an array of image and sound file URLs to preload
-    var preloadImages = ["images/image-C-maj-7.png", "images/image-C#-maj-7.png", "images/image-D-maj-7.png", "images/image-D#-maj-7.png", "images/image-Db-maj-7.png", "images/image-E-maj-7.png", "images/image-Eb-maj-7.png", "images/image-F-maj-7.png", "images/image-F#-maj-7.png", "images/image-G-maj-7.png", "images/image-G#-maj-7.png", "images/image-Gb-maj-7.png", "images/image-A-maj-7.png", "images/image-A#-maj-7.png", "images/image-Ab-maj-7.png", "images/image-B-maj-7.png", "images/image-Bb-maj-7.png" /* Add more image URLs */];
-    var preloadSounds = ["sounds/sound-file-C-maj-7.mp3", "sounds/sound-file-C#-maj-7.mp3","sounds/sound-file-D-maj-7.mp3", "sounds/sound-file-D#-maj-7.mp3", "sounds/sound-file-Db-maj-7.mp3", "sounds/sound-file-E-maj-7.mp3", "sounds/sound-file-Eb-maj-7.mp3", "sounds/sound-file-F-maj-7.mp3", "sounds/sound-file-F#-maj-7.mp3", "sounds/sound-file-G-maj-7.mp3", "sounds/sound-file-G#-maj-7.mp3", "sounds/sound-file-Gb-maj-7.mp3", "sounds/sound-file-A-maj-7.mp3", "sounds/sound-file-Ab-maj-7.mp3", "sounds/sound-file-B-maj-7.mp3", "sounds/sound-file-Bb-maj-7.mp3",/* Add more sound file URLs */];
+    var preloadImages = ["images/image-C-maj-7.png", "images/image-Cs-maj-7.png", "images/image-D-maj-7.png", "images/image-Ds-maj-7.png", "images/image-Db-maj-7.png", "images/image-E-maj-7.png", "images/image-Eb-maj-7.png", "images/image-F-maj-7.png", "images/image-Fs-maj-7.png", "images/image-G-maj-7.png", "images/image-Gs-maj-7.png", "images/image-Gb-maj-7.png", "images/image-A-maj-7.png", "images/image-As-maj-7.png", "images/image-Ab-maj-7.png", "images/image-B-maj-7.png", "images/image-Bb-maj-7.png" /* Add more image URLs */];
+    var preloadSounds = ["sounds/sound-file-C-maj-7.mp3", "sounds/sound-file-Cs-maj-7.mp3","sounds/sound-file-D-maj-7.mp3", "sounds/sound-file-Ds-maj-7.mp3", "sounds/sound-file-Db-maj-7.mp3", "sounds/sound-file-E-maj-7.mp3", "sounds/sound-file-Eb-maj-7.mp3", "sounds/sound-file-F-maj-7.mp3", "sounds/sound-file-Fs-maj-7.mp3", "sounds/sound-file-G-maj-7.mp3", "sounds/sound-file-Gs-maj-7.mp3", "sounds/sound-file-Gb-maj-7.mp3", "sounds/sound-file-A-maj-7.mp3", "sounds/sound-file-Ab-maj-7.mp3", "sounds/sound-file-B-maj-7.mp3", "sounds/sound-file-Bb-maj-7.mp3",/* Add more sound file URLs */];
 
     // Function to preload resources
     function preloadResources(resourceArray) {
@@ -64,19 +64,20 @@ document.addEventListener("DOMContentLoaded", function () {
         // Mapping of notes to sound file names
         var noteToFileName = {
             "C": "sound-file-C-maj-7.mp3",
-            "C#": "sound-file-C#-maj-7.mp3",
+            "C#": "sound-file-Cs-maj-7.mp3",
             "Db": "sound-file-Db-maj-7.mp3",
             "D": "sound-file-D-maj-7.mp3",
-            "D#": "sound-file-D#-maj-7.mp3",
+            "D#": "sound-file-Ds-maj-7.mp3",
+            "Eb": "sound-file-Eb-maj-7.mp3",
             "E": "sound-file-E-maj-7.mp3",
             "F": "sound-file-F-maj-7.mp3",
-            "F#": "sound-file-F#-maj-7.mp3",
+            "F#": "sound-file-Fs-maj-7.mp3",
             "Gb": "sound-file-Gb-maj-7.mp3",
             "G": "sound-file-G-maj-7.mp3",
-            "G#": "sound-file-G#-maj-7.mp3",
+            "G#": "sound-file-Gs-maj-7.mp3",
             "Ab": "sound-file-Ab-maj-7.mp3",
             "A": "sound-file-A-maj-7.mp3",
-            "A#": "sound-file-A#-maj-7.mp3",
+            "A#": "sound-file-As-maj-7.mp3",
             "Bb": "sound-file-Bb-maj-7.mp3",
             "B": "sound-file-B-maj-7.mp3",
         };
