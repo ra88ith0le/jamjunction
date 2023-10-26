@@ -63,26 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
     function getFileNameForNote(note) {
         // Mapping of notes to sound file names
         var noteToFileName = {
-            // Bb Trumpet pitch transposition mappings
-            // "C": "sound-file-Bb-maj-7.mp3",
-            // "C#": "sound-file-B-maj-7.mp3",
-            // "Db": "sound-file-B-maj-7.mp3",
-            // "D": "sound-file-C-maj-7.mp3",
-            // "D#": "sound-file-C#-maj-7.mp3",
-            // "Eb": "sound-file-Db-maj-7.mp3",
-            // "E": "sound-file-D-maj-7.mp3",
-            // "F": "sound-file-Ds-maj-7.mp3",
-            // "F#": "sound-file-E-maj-7.mp3",
-            // "Gb": "sound-file-E-maj-7.mp3",
-            // "G": "sound-file-F-maj-7.mp3",
-            // "G#": "sound-file-Fs-maj-7.mp3",
-            // "Ab": "sound-file-Gb-maj-7.mp3",
-            // "A": "sound-file-G-maj-7.mp3",
-            // "A#": "sound-file-Gs-maj-7.mp3",
-            // "Bb": "sound-file-Ab-maj-7.mp3",
-            // "B": "sound-file-A-maj-7.mp3",
-
-            // Concert pitch mappings 
             "C": "sound-file-C-maj-7.mp3",
             "C#": "sound-file-Cs-maj-7.mp3",
             "Db": "sound-file-Db-maj-7.mp3",
