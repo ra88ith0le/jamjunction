@@ -2,8 +2,8 @@
 
 /* Style for the dropdown fields */
 .sound-input {
-    width: 23.5%; /* Full width on small screens */
-    padding: 0px 12px 0px 12px;
+    width: 24%; /* Full width on small screens */
+    padding: 0px 4px 0px 12px;
     color: #00147C;
     border: 1px solid #f3f4f9;
     background-color: #f3f4f9;
@@ -18,7 +18,8 @@
 /* Style for the number fields */
 #bpmInput,
 #repetitions {
-    width: 80%; /* Full width on small screens */
+    width: 83%; /* Full width on small screens */
+    margin-right: 2px;
     border: 1px solid #f3f4f9;
     background-color: #f3f4f9;
     border-radius: 5px;
@@ -69,7 +70,7 @@
 
 #playButton {
     padding: 10px 20px;
-    width: 95%; /* Full width on small screens */
+    width: 100%; /* Full width on small screens */
     height: 48px;
     background-color: #00147C;
     color: #fff;
@@ -155,6 +156,6 @@ h3 {
 
   .bottom {
     background-color: #fff;
-    padding: 16px;
+    padding: 10px;
     border-radius: 5px;
   }
