@@ -96,9 +96,11 @@
 
 #playButton:hover {
     background-color: #FF383D;
+}
+#playButton:focus{background-color:#f3f4f9;
+    background-color: #F3F5FA;
     color: #617094;
 }
-#playButton:focus{background-color:#f3f4f9;}
 
 /* Style for the image container */
 #imageContainer {
