@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     var playButton = document.getElementById("playButton");
+    var stopButton = document.getElementById("stopButton"); // New stop button
     var inputs = document.querySelectorAll(".sound-input");
     var repetitionsInput = document.getElementById("repetitions");
     var audio = new Audio();
@@ -8,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var repetitions = 1;
     var soundImage = document.getElementById("soundImage");
     var bpmInput = document.getElementById("bpmInput");
+    var sequenceTimeout; // Variable to store the timeout ID
 
     // Define an array of image and sound file URLs to preload
     var preloadImages = ["images/image-C-maj-7.png", "images/image-Cs-maj-7.png", "images/image-D-maj-7.png", "images/image-Ds-maj-7.png", "images/image-Db-maj-7.png", "images/image-E-maj-7.png", "images/image-Eb-maj-7.png", "images/image-F-maj-7.png", "images/image-Fs-maj-7.png", "images/image-G-maj-7.png", "images/image-Gs-maj-7.png", "images/image-Gb-maj-7.png", "images/image-A-maj-7.png", "images/image-As-maj-7.png", "images/image-Ab-maj-7.png", "images/image-B-maj-7.png", "images/image-Bb-maj-7.png" /* Add more image URLs */];
@@ -29,6 +31,18 @@ document.addEventListener("DOMContentLoaded", function () {
     // Preload images and sounds
     preloadResources(preloadImages);
     preloadResources(preloadSounds);
+
+    stopButton.addEventListener("click", function () {
+        // Pause the audio immediately
+        audio.pause();
+
+        // Clear the timeout to stop the playback
+        clearTimeout(sequenceTimeout);
+
+        // Reset the sequence and current index
+        sequence = [];
+        currentIndex = 0;
+    });
 
 
     playButton.addEventListener("click", function () {
@@ -152,10 +166,11 @@ document.addEventListener("DOMContentLoaded", function () {
             audio.play();
             updateSoundImage(sequence[currentIndex]);
 
-            setTimeout(function () {
+            sequenceTimeout = setTimeout(function () {
                 audio.pause();
                 audio.currentTime = 0; // Reset audio to the beginning
                 currentIndex++;
+
                 if (currentIndex === sequence.length) {
                     // All sound files have been played, reset the currentIndex
                     currentIndex = 0;

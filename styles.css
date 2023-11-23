@@ -102,6 +102,10 @@
     background-color: #F3F5FA;
     color: #617094;
 }
+#stopButton:hover {
+    border-color: #FF383D;
+    color: #FF383D;
+}
 
 /* Style for the image container */
 #imageContainer {
