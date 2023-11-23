@@ -10,6 +10,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var soundImage = document.getElementById("soundImage");
     var bpmInput = document.getElementById("bpmInput");
     var sequenceTimeout; // Variable to store the timeout ID
+    var musicSwitch = document.getElementById("musicSwitch"); // Added switch element
+
 
     // Define an array of image and sound file URLs to preload
     var preloadImages = ["images/image-C-maj-7.png", "images/image-Cs-maj-7.png", "images/image-D-maj-7.png", "images/image-Ds-maj-7.png", "images/image-Db-maj-7.png", "images/image-E-maj-7.png", "images/image-Eb-maj-7.png", "images/image-F-maj-7.png", "images/image-Fs-maj-7.png", "images/image-G-maj-7.png", "images/image-Gs-maj-7.png", "images/image-Gb-maj-7.png", "images/image-A-maj-7.png", "images/image-As-maj-7.png", "images/image-Ab-maj-7.png", "images/image-B-maj-7.png", "images/image-Bb-maj-7.png" /* Add more image URLs */];
@@ -51,7 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
             var selectedOption = select.options[select.selectedIndex].value;
             var fileName = getFileNameForNote(selectedOption);
             if (fileName) {
-                soundFiles.push("sounds/" + fileName); // Updated sound file path
+                // Adjust sound file path based on the switch state
+                var soundFolder = musicSwitch.checked ? "sounds-Bb" : "sounds-C";
+                soundFiles.push(soundFolder + "/" + fileName);
             }
         });
 
@@ -183,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function updateSoundImage(soundFileName) {
-        var imageName = soundFileName.replace("sounds/", "images/").replace("sound-file-", "image-").replace(".mp3", ".png"); // Updated image file path
+        var imageName = soundFileName.replace("sounds-C/", "images/").replace("sounds-Bb/", "images/").replace("sound-file-", "image-").replace(".mp3", ".png"); // Updated image file path
         soundImage.src = imageName;
     }
 });
