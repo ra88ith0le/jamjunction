@@ -191,3 +191,4 @@ document.addEventListener("DOMContentLoaded", function () {
         soundImage.src = imageName;
     }
 });
+
